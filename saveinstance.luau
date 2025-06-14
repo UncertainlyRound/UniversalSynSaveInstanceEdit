@@ -2336,6 +2336,8 @@ local function synsaveinstance(CustomOptions, CustomOptions2)
 				end
 
 				return output
+				else
+					return "-- Ignored"
 				end
 			end
 		else
