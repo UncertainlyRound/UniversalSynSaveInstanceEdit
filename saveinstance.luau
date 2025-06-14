@@ -2286,6 +2286,7 @@ local function synsaveinstance(CustomOptions, CustomOptions2)
 			local decomp = construct_TimeoutHandler(Timeout, Decompiler, "Decompiler timed out")
 
 			ldecompile = function(script)
+				if script.Parent == workspace.Map.Ingame.Map then
 				-- local name = scr.ClassName .. scr.Name
 				local hashed_bytecode
 				if ScriptCache then
@@ -2335,6 +2336,7 @@ local function synsaveinstance(CustomOptions, CustomOptions2)
 				end
 
 				return output
+				end
 			end
 		else
 			ldecompile = function()
